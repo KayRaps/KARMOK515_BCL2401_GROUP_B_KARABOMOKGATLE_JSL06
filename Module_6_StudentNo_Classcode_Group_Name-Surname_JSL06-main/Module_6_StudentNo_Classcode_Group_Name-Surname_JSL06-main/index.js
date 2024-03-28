@@ -53,13 +53,6 @@ function addToOrder(itemName) {
   
 const selectedList = document.getElementById('selected-list');
 
-    // Add a delete button to the list item
-    let deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", function() {
-        deleteFromOrder(listItem);
-    });
-    listItem.appendChild(deleteButton);
 
 
     // Append the list item to the order items list
@@ -85,6 +78,7 @@ function deleteFromOrder(itemElement) {
 // Remove the item from the order list
 orderList.removeChild(itemElement);
 }
+
 
 
 // Start the menu system by calling the init function
