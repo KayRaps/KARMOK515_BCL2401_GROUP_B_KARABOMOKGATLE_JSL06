@@ -33,6 +33,18 @@ function displayMenuItems(menu) {
 
     }
 
+    //Function to add an item to the order list
+    function addToOrder(itemName) {
+        const orderItemList = document.getElementById('order-items');
+        const orderTotalElem = document.createElement('li');
+        orderItem.textContent = itemName;
+        orderItemList.appendChild(orderItem);
+        const currentTotal = parseFloat(orderTotalElem.textContent);
+        const itemPrice = 90; //Cusomizing the item price (assumed R90 per item)
+        const newTotal = (currentTotal + itemPrice).toFixed(2);
+        orderTotalElem.textContent = newTotal;
+    }
+
         // Create an element to represent the category
 
         // Set the text content of the category element to the category name
