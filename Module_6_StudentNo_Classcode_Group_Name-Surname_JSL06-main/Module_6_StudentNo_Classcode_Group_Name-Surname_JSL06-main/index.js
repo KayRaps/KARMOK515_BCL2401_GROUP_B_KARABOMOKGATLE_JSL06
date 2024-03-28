@@ -70,16 +70,5 @@ function initMenuSystem(menu) {
     displayMenuItems(menu);
 }
 
-// Function to delete an item from the order
-function deleteFromOrder(itemElement) {
-    // Get the order items list and the order total element from the HTML
-    let orderList = document.getElementById("order-items");
-    let orderTotal = document.getElementById("order-total");
-// Remove the item from the order list
-orderList.removeChild(itemElement);
-}
-
-
-
 // Start the menu system by calling the init function
 initMenuSystem(menu);
