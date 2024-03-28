@@ -38,7 +38,8 @@ function displayMenuItems(menu) {
     //Function to add an item to the order list
     function addToOrder(itemName) {
         const orderItemList = document.getElementById('order-items');
-        const orderTotalElem = document.createElement('li');
+        const orderTotalElem = document.createElement('order-total');
+        const orderItem = document.createElement('li');
         orderItem.textContent = itemName;
         orderItemList.appendChild(orderItem);
         const currentTotal = parseFloat(orderTotalElem.textContent);
