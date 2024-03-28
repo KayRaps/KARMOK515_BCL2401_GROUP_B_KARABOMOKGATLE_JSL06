@@ -24,9 +24,12 @@ function displayMenuItems(menu) {
         listItem.textContent = item;
 
 
-        //event listener to each item to trigger addToOrder function
-        
-      })
+        //Adding click event listener to each item to trigger addToOrder function
+        listItem.addEventListener('click', () => addToOrder(item));
+        HTMLDataListElement.appendChild(listItem);
+      });
+      menuContainer.appendChild(listElement);
+    }
 
     }
 
