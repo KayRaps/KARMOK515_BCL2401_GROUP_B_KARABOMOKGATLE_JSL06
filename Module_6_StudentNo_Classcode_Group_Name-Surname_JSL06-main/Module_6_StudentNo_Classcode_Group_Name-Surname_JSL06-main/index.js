@@ -50,6 +50,18 @@ function addToOrder(itemName) {
     let listItem = document.createElement("li");
     listItem.textContent = itemName;
 
+  
+const selectedList = document.getElementById('selected-list');
+
+    // Add a delete button to the list item
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", function() {
+        deleteFromOrder(listItem);
+    });
+    listItem.appendChild(deleteButton);
+
+
     // Append the list item to the order items list
     orderList.appendChild(listItem);
 
@@ -64,6 +76,16 @@ function initMenuSystem(menu) {
     // Call the function to display menu items
     displayMenuItems(menu);
 }
+
+// Function to delete an item from the order
+function deleteFromOrder(itemElement) {
+    // Get the order items list and the order total element from the HTML
+    let orderList = document.getElementById("order-items");
+    let orderTotal = document.getElementById("order-total");
+// Remove the item from the order list
+orderList.removeChild(itemElement);
+}
+
 
 // Start the menu system by calling the init function
 initMenuSystem(menu);
