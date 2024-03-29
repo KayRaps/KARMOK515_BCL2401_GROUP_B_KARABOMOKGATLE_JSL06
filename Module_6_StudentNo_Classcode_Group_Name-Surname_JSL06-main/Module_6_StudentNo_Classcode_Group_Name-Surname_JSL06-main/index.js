@@ -60,7 +60,7 @@ const selectedList = document.getElementById('selected-list');
 
     // Calculate and update the total price 
     let totalPrice = parseFloat(orderTotal.textContent) || 0;
-    totalPrice += 50; 
+    totalPrice += 60; 
     orderTotal.textContent = totalPrice.toFixed(2); // Displaying total up to 2 decimal places
 }
 
